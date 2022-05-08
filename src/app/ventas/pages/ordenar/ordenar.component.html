@@ -16,21 +16,21 @@
             label="toggle mayúsculas"
             class="mr-1 p-button-warning"></button>
 
-        <button 
+        <button (click)="cambiarOrden('nombre')"
             aria-label="por nombre"
             pButton type="button"
             icon="pi pi-sort"
             label="por nombre"
             class="mr-1"></button>
         
-        <button 
+        <button (click)="cambiarOrden('vuela')"
             aria-label="vuela"
             pButton type="button"
             icon="pi pi-sort"
             label="Vuela"
             class="mr-1 p-button-success"></button>
 
-        <button 
+        <button (click)="cambiarOrden('color')"
             aria-label="por color"
             pButton type="button"
             icon="pi pi-sort"
@@ -41,7 +41,7 @@
 
 <div class="p-grid">
     <div class="p-col mt-2">
-        <p-table [value]="heroes | ordenar" responsiveLayout="scroll">
+        <p-table [value]="heroes | ordenar:'ordernarPor'" responsiveLayout="scroll">
             <ng-template pTemplate="header">
                 <tr>
                     <th>Nombre</th>
